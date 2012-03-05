@@ -2,9 +2,6 @@ require "fdb"
 
 
 class LearningSwitch < Controller
-  add_timer_event :age_fdb, 5, :periodic
-
-
   def start
     @fdb = FDB.new
   end
@@ -19,11 +16,6 @@ class LearningSwitch < Controller
     else
       flood dpid, message
     end
-  end
-
-
-  def age_fdb
-    @fdb.age
   end
 
 
