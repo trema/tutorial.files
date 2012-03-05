@@ -1,5 +1,5 @@
 class HelloSwitch < Controller
-  def switch_ready datapath_id
+  def switch_ready dpid
     info "Hello #{ dpid.to_hex }!"
   end
 end
